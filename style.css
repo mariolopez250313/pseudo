@@ -1,0 +1,219 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    background-color: rgb(80, 157, 233);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.boton{
+    display: block;
+    background-color: rgb(191, 147, 147);
+    color: black;
+    margin: 20px auto;
+    width: 160px;
+    text-align: center;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 30%;
+}
+
+.boton:hover{
+    background-color: aliceblue;
+    color: red;
+}
+
+.boton:active{
+    background-color: yellow;
+    color: black;
+}
+
+#p1:target{
+    background-color: rgb(197, 194, 194, 0.5);
+}
+
+#p2:target{
+    background-color: rgb(151, 241, 151, 0.5);
+}
+
+#p3:target{
+    background-color: rgb(35, 176, 169, 0.5);
+}
+
+.textos1, .textos2{
+    background-color: lightgreen;
+    width: max-content;
+    margin: 30px auto;
+    text-align: center;
+    padding: 10px;
+}
+
+.textos1 p{
+    background-color: orange;
+    color: black;
+}
+
+.textos1 p:first-child{
+     background-color: orange;
+    color: black;
+}
+
+
+/* .textos1 p:last-child{
+        background-color: orange;
+    color: black;
+}*/ /* ultimo */
+
+
+/* .textos1 p:nth-child(odd){
+        background-color: orange;
+    color: black;
+}*/ /* impar */
+
+/* .textos1 p:first-child(even){
+        background-color: orange;
+    color: black;
+}*/ /* pares */
+
+
+/* .textos1 p:nth-child(3){
+        background-color: orange;
+    color: black;
+}*/ /* linea especifica */
+
+/* .textos1 p:nth-child(n+3) { 
+        background-color: orange;
+    color: black;
+}*/ /* cuenta de arriba hacia abajo */
+
+
+.tabla{
+    margin: 30px auto;
+    border-collapse: collapse;
+}
+
+.tabla th, td{
+    border: 2px solid blue;
+}
+
+.tabla thead{
+    background-color: orange;
+    color: white;
+}
+
+.tabla tr:nth-child(even){
+    background-color: rgb(0, 0, 0);
+    color:white;
+}
+
+.nombre{
+    display: flex;
+    margin: 40px auto;
+    justify-content: center;
+    list-style: none;
+}
+
+.nombre li{
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.nombre li:nth-child(odd){
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-shadow: 5px 5px 7px white;
+}
+
+.nombre li:nth-child(even){
+    background-color: white;
+    color: black;
+    padding: 10px;
+    text-shadow: 5px 5px 7px rgb(0, 0, 0);
+    
+}
+
+/* .nombre li:nth-child(4){
+    background-color: blue;
+    color: red;
+    padding: 3%;
+} /* linea especifica */ 
+
+.lista{
+    width: max-content;
+    margin: 30px auto;
+    list-style: none;
+    background-color: lightseagreen;
+    padding: 20px;
+}
+/* tecla windows y : saco los emojis */
+
+.lista li::before{
+    content: "🦏";
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.textos2 p::after{
+    content: "💀";
+}
+
+.cuadro{
+    background-color: rgb(179, 175, 139, 0.4);
+    width: 55%;
+    padding: 15px;
+    margin: 20px auto;
+    text-align: center;
+    position: relative;/* no se mueve */
+}
+
+.cuadro::before{
+    width: 80px;
+    height: 30px;
+    content: "(⌐■_■)";
+    top:calc(50% - 15px);
+    right: calc(100% - 15px);
+    position: absolute;/* se mueve */
+}
+
+.cuadro::after{
+    width: 80px;
+    height: 30px;
+    content: "🦾";
+    top:calc(50% - 15px);
+    left: calc(100% - 15px);
+    position: absolute;/* se mueve */
+}
+
+@media screen and (max-width:500px){
+    .cuadro::after, .cuadro::before{
+        content: "";
+    }
+    .cuadro{
+        width: 100%;
+    }
+}
+
+/* formulario */
+
+.formu{
+    margin: 50px 20px;
+}
+
+label{
+    background-color: black;
+    padding: 10px;
+    color: lightgreen;
+}
+
+.formu:checked + label{
+    background-color: blue;
+}
